@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Előadás Nyilvántartás</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+        }
+        table, th, td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Előadás Rögzítés</legend>
+            <form action="" id="eloadasForm">
+                <p>
+                    <label for="elodadas_id">Előadás id:</label>
+                    <input type="number" name="elodadas_id" id="elodadas_id" required placeholder="Eloadas azonosito...">
+                </p>
+                <p>
+                    <label for="cim">Cím:</label>
+                    <input type="text" name="cim" id="cim" required placeholder="pl.: Keszthely">
+                </p>
+                <p>
+                    <label for="eloado">Előadó:</label>
+                    <input type="text" name="eloado" id="eloado" required placeholder="pl.: Bittó duó">
+                </p>
+                <p>
+                    <label for="datum">Dátum:</label>
+                    <input type="text"  name="datum" id="datum" required placeholder="pl.: Március">
+                </p>
+                <p>
+                    <label for="helyszin">Helyszín:</label>
+                    <input type="text" name="helyszin" id="helyszin" required placeholder="pl.: Simándy József terem">
+                </p>
+                <p>
+                    <label for="tema">Téma:</label>
+                    <input type="text" name="tema" id="tema" required placeholder="pl.: Koncert">
+                </p>
+                <p>
+                    <button type="submit">Rögzítés</button>
+                </p>
+            </form>
+        </fieldset>
+        <h3>Előadások Táblázata</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Elodadas id</th>
+                    <th>Cim</th>
+                    <th>Előadó</th>
+                    <th>Datum</th>
+                    <th>Helyszín</th>
+                    <th>Téma</th>
+                </tr>
+            </thead>
+            <tbody id="eloadasTable"></tbody>
+        </table>
+    </div>
+
+    <script src="eloadas.js"></script>
+</body>
+</html>
